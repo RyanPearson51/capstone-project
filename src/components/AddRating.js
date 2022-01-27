@@ -11,8 +11,9 @@ import Button from '@mui/material/Button';
 
 const AddRating = ({ ratings, addBusiness }) => {
     const [name, setName] = useState('');
+    const [team, setTeam] = useState('');
+    const [rating, setRating] = useState('');
     const [address, setAddress] = useState('');
-    const [hours, setHours] = useState('');
     const [description, setDescription] = useState('');
 
     const navigate = useNavigate();
@@ -24,9 +25,10 @@ const AddRating = ({ ratings, addBusiness }) => {
         addBusiness({
             id: newListingId,
             name: name,
-            description: description,
-            hours: hours,
-            address: address
+            team: team,
+            rating: rating,
+            address: address,
+            description: description
         })
 
         navigate('/');
@@ -55,7 +57,7 @@ const AddRating = ({ ratings, addBusiness }) => {
                             label="Team"
                             type="text"
                             variant="standard"
-                            onChange={(event) => setAddress(event.target.value)}
+                            onChange={(event) => setTeam(event.target.value)}
                         />
                         <TextField
                             fullWidth
@@ -65,7 +67,27 @@ const AddRating = ({ ratings, addBusiness }) => {
                             label="Rating (1-5)"
                             type="text"
                             variant="standard"
-                            onChange={(event) => setHours(event.target.value)}
+                            onChange={(event) => setRating(event.target.value)}
+                        />
+                        <TextField
+                            fullWidth
+                            hiddenLabel
+                            id="hours"
+                            name="hours"
+                            label="Description"
+                            type="text"
+                            variant="standard"
+                            onChange={(event) => setAddress(event.target.value)}
+                        />
+                        <TextField
+                            fullWidth
+                            hiddenLabel
+                            required
+                            id="name"
+                            name="name"
+                            label="Short description"
+                            variant="standard"
+                            onChange={(event) => setDescription(event.target.value)}
                         />
                         <Button
                             variant="contained" sx={{

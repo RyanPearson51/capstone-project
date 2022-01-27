@@ -90,7 +90,7 @@ const Navigation = ({
                             }}
                         >
                             <MenuItem onClick={handleCloseNavMenu}><Link to="/" >Ratings</Link></MenuItem>
-                            {user.isLoggedIn && <MenuItem onClick={handleCloseNavMenu}><Link to="/listing/create" >Add</Link></MenuItem>}
+                            {user.isLoggedIn && <MenuItem onClick={handleCloseNavMenu}><Link to="/rating/create" >Add</Link></MenuItem>}
                             {!user.isLoggedIn && <MenuItem onClick={handleCloseNavMenu}><Link to="/login" >Login</Link></MenuItem>}
                             {user.isLoggedIn && <MenuItem onClick={handleLogout}><Link to="/logout" >Logout</Link></MenuItem>}
                         </Menu>
@@ -108,7 +108,7 @@ const Navigation = ({
                     <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
                         <ul className={styles.navList}>
                             <li className={styles.navListItem}><Link to="/" >Ratings</Link></li>
-                            {user.isLoggedIn && <li className={styles.navListItem}><Link to="/listing/create" >Add</Link></li>}
+                            {user.isLoggedIn && <li className={styles.navListItem}><Link to="/rating/create" >Add</Link></li>}
                             {!user.isLoggedIn && <li className={styles.navListItem}><Link to="/login" >Login</Link></li>}
                             {user.isLoggedIn && <li className={styles.navListItem} onClick={handleLogout}><Link to="/logout" >Logout</Link></li>}
                         </ul>

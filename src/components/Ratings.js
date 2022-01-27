@@ -30,17 +30,17 @@ const Ratings = ({
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                        {ratings.map((listing, index) => (
+                        {ratings.map((rating, index) => (
                             <TableRow
                                 key={index}
                                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                             >
                                 <TableCell component="th" scope="row">
-                                    <Link to={`/listing/${listing.id}`}>{listing.name}</Link>
+                                    <Link to={`/rating/${rating.id}`}>{rating.name}</Link>
                                 </TableCell>
-                                <TableCell>{listing.description}</TableCell>
-                                <TableCell>{listing.hours}</TableCell>
-                                <TableCell>{listing.address}</TableCell>
+                                <TableCell>{rating.team}</TableCell>
+                                <TableCell>{rating.rating}</TableCell>
+                                <TableCell>{rating.description}</TableCell>
                                 {user.isLoggedIn ? (<TableCell>
                                     <Button onClick={() => removeBusiness(index)}>
                                         <DeleteIcon sx={{ color: 'red' }}></DeleteIcon>

@@ -6,8 +6,9 @@ import Geocode from "react-geocode";
 import styles from './Map.module.css';
 
 const Map = ({ inputAddress }) => {
-    const [latitude, setLatitude] = useState(30.284982);
-    const [longitude, setLongitude] = useState(-97.741641);
+    //(map not functional, coordinates set to baseball hall of fame)
+    const [latitude, setLatitude] = useState(42.6999);
+    const [longitude, setLongitude] = useState(-74.9232);
     const [zoom, setZoom] = useState(13);
 
     const findAddress = () => {
@@ -27,8 +28,8 @@ const Map = ({ inputAddress }) => {
             );
         } else {
             
-            setLatitude(30.284982);
-            setLongitude(-97.741641);
+            setLatitude(42.6999);
+            setLongitude(-74.9232);
             setZoom(13);
         }
     }

@@ -6,25 +6,45 @@ const state= {
     ratings: [
         {
             'id': 1,
-            'name': 'Mandolas Italian Kitchen',
-            'description': 'Family run Italian Market promoting Italian culture and cuisine',
-            'hours': '11am - 10pm',
-            'address': '4700 W Guadalupe St #12, Austin TX 78756'
+            'name': 'Globe Life Field',
+            'team': 'Texas Rangers',
+            'rating': '3',
+            'address': '734 Stadium Dr, Arlington, TX 76011',
+            'description': 'Boring design for new stadium'
         },
         {
             'id': 2,
-            'name': "Rudy's",
-            'description': 'Country Store and Barbecue',
-            'hours': '6am - 9pm',
-            'address': '3914 N Lamar Blvd, Austin TX 78756'
+            'name': "Coors Field",
+            'team': 'Colorado Rockies',
+            'rating': '4',
+            'address': '2001 Blake St, Denver, CO 80205',
+            'description': 'Cool feature of a purple row at 5280ft'
         },
         {
             'id': 3,
-            'name': "Lucy's",
-            'description': 'Homegrown Austin restaurant specializing in fried chicken',
-            'hours': '11am-9pm',
-            'address': '5408 Burnet Road, Austin TX 78756'
+            'name': "T-Mobile Park",
+            'team': 'Seattle Mariners',
+            'rating': '5',
+            'address': '1250 1st Ave S, Seattle, WA 98134',
+            'description': 'Great views over left field'
+        },
+        {
+            'id': 4,
+            'name': "Tropicana Field",
+            'team': 'Tampa Bay Rays',
+            'rating': '2',
+            'address': '1 Tropicana Dr., St. Petersburg, FL 33705',
+            'description': 'Poorly designed, cool stingray tank in outfield seats'
+        },
+        {
+            'id': 5,
+            'name': "Globe Life Field",
+            'team': 'Texas Rangers',
+            'rating': '5',
+            'address': '734 Stadium Dr, Arlington, TX 76011',
+            'description': 'Great new stadium + air conditioning'
         }
+
     ]
 };
 
