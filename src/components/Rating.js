@@ -5,7 +5,7 @@ import Map from './Map';
 
 import Container from '@mui/material/Container';
 
-const Listing = ({ listings }) => {
+const Rating = ({ listings }) => {
     let { id } = useParams();
     let currentListing = listings.find(listing => listing.id === Number(id));
 
@@ -20,4 +20,4 @@ const Listing = ({ listings }) => {
     );
 }
 
-export default Listing;
+export default Rating;

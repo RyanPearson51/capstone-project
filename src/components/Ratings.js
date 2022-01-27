@@ -11,9 +11,9 @@ import TableRow from '@mui/material/TableRow';
 import Button from '@mui/material/Button';
 import DeleteIcon from '@mui/icons-material/Delete';
 
-const Listings = ({
+const Ratings = ({
     user,
-    listings,
+    ratings,
     removeBusiness
 }) => {
     return (
@@ -23,14 +23,14 @@ const Listings = ({
                     <TableHead>
                         <TableRow>
                             <TableCell>Name</TableCell>
-                            <TableCell>Description</TableCell>
-                            <TableCell>Hours</TableCell>
-                            <TableCell>Address</TableCell>
+                            <TableCell>Team</TableCell>
+                            <TableCell>Rating</TableCell>
+                            <TableCell>Details</TableCell>
                             {user.isLoggedIn ? (<TableCell>Delete</TableCell>) : null}
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                        {listings.map((listing, index) => (
+                        {ratings.map((listing, index) => (
                             <TableRow
                                 key={index}
                                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
@@ -55,4 +55,4 @@ const Listings = ({
     );
 }
 
-export default Listings;
+export default Ratings;

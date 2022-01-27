@@ -3,7 +3,7 @@ const state= {
         'isLoggedIn': false,
         'username': null
     },
-    listings: [
+    ratings: [
         {
             'id': 1,
             'name': 'Mandolas Italian Kitchen',

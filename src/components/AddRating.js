@@ -9,7 +9,7 @@ import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 
-const AddListing = ({ listings, addBusiness }) => {
+const AddRating = ({ ratings, addBusiness }) => {
     const [name, setName] = useState('');
     const [address, setAddress] = useState('');
     const [hours, setHours] = useState('');
@@ -18,7 +18,7 @@ const AddListing = ({ listings, addBusiness }) => {
     const navigate = useNavigate();
 
     const handleClick = () => {
-        let lastListingId = listings[listings.length - 1].id;
+        let lastListingId = ratings[ratings.length - 1].id;
         let newListingId = Number(lastListingId + 1);
 
         addBusiness({
@@ -43,7 +43,7 @@ const AddListing = ({ listings, addBusiness }) => {
                             required
                             id="name"
                             name="name"
-                            label="Name"
+                            label="Ballpark Name"
                             variant="standard"
                             onChange={(event) => setName(event.target.value)}
                         />
@@ -52,7 +52,7 @@ const AddListing = ({ listings, addBusiness }) => {
                             hiddenLabel
                             id="address"
                             name="address"
-                            label="Address"
+                            label="Team"
                             type="text"
                             variant="standard"
                             onChange={(event) => setAddress(event.target.value)}
@@ -62,20 +62,10 @@ const AddListing = ({ listings, addBusiness }) => {
                             hiddenLabel
                             id="hours"
                             name="hours"
-                            label="Hours (ex. 8AM - 9PM)"
+                            label="Rating (1-5)"
                             type="text"
                             variant="standard"
                             onChange={(event) => setHours(event.target.value)}
-                        />
-                        <TextField
-                            fullWidth
-                            hiddenLabel
-                            id="description"
-                            name="description"
-                            label="Description"
-                            type="text"
-                            variant="standard"
-                            onChange={(event) => setDescription(event.target.value)}
                         />
                         <Button
                             variant="contained" sx={{
@@ -97,4 +87,4 @@ const AddListing = ({ listings, addBusiness }) => {
     );
 }
 
-export default AddListing;
+export default AddRating;

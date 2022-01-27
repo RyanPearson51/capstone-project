@@ -1,11 +1,11 @@
 import { connect } from 'react-redux';
-import Listings from '../components/Listings';
+import Ratings from '../components/Ratings';
 import { removeBusiness } from '../redux/action';
 
 const mapStateToProps = (state) => {
     return {
         user: state.user,
-        listings: state.listings
+        ratings: state.ratings
     }
 }
 
@@ -15,4 +15,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Listings);
+export default connect(mapStateToProps, mapDispatchToProps)(Ratings);

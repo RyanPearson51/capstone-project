@@ -1,9 +1,9 @@
 import { connect } from 'react-redux';
-import Listing from '../components/Listing';
+import Listing from '../components/Rating';
 
 const mapStateToProps = (state) => {
     return {
-        listings: state.listings
+        ratings: state.ratings
     }
 }
 

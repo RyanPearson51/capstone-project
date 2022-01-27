@@ -45,7 +45,7 @@ const Navigation = ({
     }
 
     return (
-        <AppBar position="static" sx={{ backgroundColor: '#3CB471' }}>
+        <AppBar position="static" sx={{ backgroundColor: 'Navy' }}>
             <Container maxWidth="xl">
                 <Toolbar disableGutters sx={{ justifyContent: 'space-between' }}>
                     {/* Title - Desktop */}
@@ -55,7 +55,7 @@ const Navigation = ({
                         component="div"
                         sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
                     >
-                        Austin Small Businesses
+                        MLB Ballparks Ratings
                     </Typography>
 
                     <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
@@ -89,7 +89,7 @@ const Navigation = ({
                                 display: { xs: 'block', md: 'none' },
                             }}
                         >
-                            <MenuItem onClick={handleCloseNavMenu}><Link to="/" >Listings</Link></MenuItem>
+                            <MenuItem onClick={handleCloseNavMenu}><Link to="/" >Ratings</Link></MenuItem>
                             {user.isLoggedIn && <MenuItem onClick={handleCloseNavMenu}><Link to="/listing/create" >Add</Link></MenuItem>}
                             {!user.isLoggedIn && <MenuItem onClick={handleCloseNavMenu}><Link to="/login" >Login</Link></MenuItem>}
                             {user.isLoggedIn && <MenuItem onClick={handleLogout}><Link to="/logout" >Logout</Link></MenuItem>}
@@ -102,12 +102,12 @@ const Navigation = ({
                         component="div"
                         sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
                     >
-                        Austin Small Businesses
+                        MLB Ballparks Ratings
                     </Typography>
                     {/* Menu - Desktop */}
                     <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
                         <ul className={styles.navList}>
-                            <li className={styles.navListItem}><Link to="/" >Listings</Link></li>
+                            <li className={styles.navListItem}><Link to="/" >Ratings</Link></li>
                             {user.isLoggedIn && <li className={styles.navListItem}><Link to="/listing/create" >Add</Link></li>}
                             {!user.isLoggedIn && <li className={styles.navListItem}><Link to="/login" >Login</Link></li>}
                             {user.isLoggedIn && <li className={styles.navListItem} onClick={handleLogout}><Link to="/logout" >Logout</Link></li>}

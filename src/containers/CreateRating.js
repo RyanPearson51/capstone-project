@@ -1,10 +1,10 @@
 import { connect } from 'react-redux';
-import AddListing from '../components/AddListing';
+import AddRating from '../components/AddRating';
 import { addBusiness } from '../redux/action';
 
 const mapStateToProps = (state) => {
     return {
-        listings: state.listings
+        ratings: state.ratings
     }
 }
 
@@ -14,4 +14,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(AddListing);
+export default connect(mapStateToProps, mapDispatchToProps)(AddRating);

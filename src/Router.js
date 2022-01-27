@@ -2,9 +2,9 @@ import React from "react";
 import cookie from "cookie";
 
 import { Routes, Route, Navigate } from 'react-router-dom';
-import Listings from './containers/Listings';
-import Listing from './containers/Listing';
-import ListingCreate from './containers/ListingCreate'
+import Ratings from './containers/Ratings';
+import Rating from './containers/Rating';
+import CreateRating from './containers/CreateRating'
 import Login from './containers/Login';
 
 const checkAuth = () => {
@@ -19,19 +19,19 @@ const ProtectedRoute = ({ children }) => {
 const Router = () => {
     return (
         <Routes>
-            <Route exact path="/" element={<Listings />} />
-            <Route path="/listing/:id" element={<Listing />} />
+            <Route exact path="/" element={<Ratings />} />
+            <Route path="/rating/:id" element={<Rating />} />
             <Route
                 exact
-                path="/listing/create"
+                path="/rating/create"
                 element={
                     <ProtectedRoute>
-                        <ListingCreate />
+                        <CreateRating />
                     </ProtectedRoute>
                 } />
             <Route path="/login" element={<Login />}
             />
-            <Route path="/logout" element={<Listings />} />
+            <Route path="/logout" element={<Ratings />} />
         </Routes>
     );
 };
