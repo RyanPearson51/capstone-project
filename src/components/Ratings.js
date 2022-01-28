@@ -26,7 +26,7 @@ const Ratings = ({
                             <TableCell>Team</TableCell>
                             <TableCell>Rating</TableCell>
                             <TableCell>Details</TableCell>
-                            {user.isLoggedIn ? (<TableCell>Delete</TableCell>) : null}
+                            
                         </TableRow>
                     </TableHead>
                     <TableBody>
@@ -41,11 +41,7 @@ const Ratings = ({
                                 <TableCell>{rating.team}</TableCell>
                                 <TableCell>{rating.rating}</TableCell>
                                 <TableCell>{rating.description}</TableCell>
-                                {user.isLoggedIn ? (<TableCell>
-                                    <Button onClick={() => removeBusiness(index)}>
-                                        <DeleteIcon sx={{ color: 'red' }}></DeleteIcon>
-                                    </Button>
-                                </TableCell>) : null}
+                               
                             </TableRow>
                         ))}
                     </TableBody>

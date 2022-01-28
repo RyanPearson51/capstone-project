@@ -74,7 +74,7 @@ const AddRating = ({ ratings, addBusiness }) => {
                             hiddenLabel
                             id="hours"
                             name="hours"
-                            label="Description"
+                            label="Address"
                             type="text"
                             variant="standard"
                             onChange={(event) => setAddress(event.target.value)}

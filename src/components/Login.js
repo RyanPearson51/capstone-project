@@ -59,6 +59,17 @@ const Login = ({ addUser }) => {
                     onClick={handleClick}>
                     Login
                 </Button>
+                <Button
+                    variant="contained" sx={{
+                        mt: 3, backgroundColor: '#E0E0E0', color: '#000', '&:hover': {
+                            backgroundColor: '#CCC',
+                        }
+                    }}
+                    fullWidth
+                    onClick={handleClick}>
+                    Sign Up
+                </Button>
+
             </form>
         </Container >
     );
